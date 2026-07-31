@@ -8,7 +8,7 @@
     margin: 0;
     width: 1280px;
     height: 720px;
-    background: #0d1117;
+    background: radial-gradient(circle at 50% 25%, #1a2036 0%, #0d1117 65%);
     color: #f0f6fc;
     font-family: 'Segoe UI', sans-serif;
     display: flex;
@@ -18,8 +18,24 @@
     box-sizing: border-box;
     padding: 40px;
   }
-  h1 { font-size: 36px; margin-bottom: 10px; }
-  .caption { font-size: 20px; max-width: 900px; text-align: center; margin-top: 20px; color: #c9d1d9; }
+  h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #79c0ff, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+  }
+  .caption {
+    font-size: 20px;
+    max-width: 920px;
+    text-align: center;
+    margin-top: 26px;
+    color: #c9d1d9;
+    line-height: 1.5;
+  }
   .box-label { font-size: 18px; font-weight: bold; fill: #f0f6fc; }
 </style>
 </head>
@@ -27,42 +43,77 @@
   <h1>Live Inside the System</h1>
   <svg width="1100" height="340" viewBox="0 0 1100 340">
     <defs>
-      <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#161b3a"/>
+      <linearGradient id="panelGradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1c2333"/>
         <stop offset="100%" stop-color="#0d1117"/>
       </linearGradient>
+      <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+        <feGaussianBlur stdDeviation="6" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+      <filter id="dropshadow" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+      </filter>
+
+      <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#20264a"/>
+        <stop offset="100%" stop-color="#0d1117"/>
+      </linearGradient>
+      <radialGradient id="spotlight" cx="50%" cy="55%" r="50%">
+        <stop offset="0%" stop-color="#d4af37" stop-opacity="0.28"/>
+        <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
+      </radialGradient>
     </defs>
     <rect x="0" y="0" width="1100" height="340" fill="url(#skyGradient)"/>
+    <ellipse cx="555" cy="230" rx="270" ry="190" fill="url(#spotlight)"/>
+
+    <!-- stars -->
+    <circle cx="80" cy="40" r="2" fill="#f0f6fc" opacity="0.6"/>
+    <circle cx="220" cy="25" r="1.5" fill="#f0f6fc" opacity="0.5"/>
+    <circle cx="780" cy="35" r="2" fill="#f0f6fc" opacity="0.6"/>
+    <circle cx="1000" cy="50" r="1.5" fill="#f0f6fc" opacity="0.5"/>
+    <circle cx="650" cy="20" r="1.5" fill="#f0f6fc" opacity="0.4"/>
 
     <!-- skyline -->
-    <rect x="30"  y="180" width="90"  height="140" fill="#161b22" stroke="#30363d" stroke-width="2"/>
-    <rect x="130" y="130" width="70"  height="190" fill="#161b22" stroke="#30363d" stroke-width="2"/>
-    <rect x="210" y="210" width="100" height="110" fill="#161b22" stroke="#30363d" stroke-width="2"/>
-    <rect x="850" y="160" width="80"  height="160" fill="#161b22" stroke="#30363d" stroke-width="2"/>
-    <rect x="950" y="200" width="110" height="120" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+    <rect x="30"  y="180" width="90"  height="140" fill="url(#panelGradient)" stroke="#30363d" stroke-width="2" filter="url(#dropshadow)"/>
+    <rect x="130" y="130" width="70"  height="190" fill="url(#panelGradient)" stroke="#30363d" stroke-width="2" filter="url(#dropshadow)"/>
+    <rect x="210" y="210" width="100" height="110" fill="url(#panelGradient)" stroke="#30363d" stroke-width="2" filter="url(#dropshadow)"/>
+    <rect x="850" y="160" width="80"  height="160" fill="url(#panelGradient)" stroke="#30363d" stroke-width="2" filter="url(#dropshadow)"/>
+    <rect x="950" y="200" width="110" height="120" fill="url(#panelGradient)" stroke="#30363d" stroke-width="2" filter="url(#dropshadow)"/>
 
-    <!-- chapel, the landmark - taller, gold outline -->
-    <rect x="500" y="110" width="110" height="210" fill="#161b22" stroke="#d4af37" stroke-width="3"/>
-    <polygon points="500,110 555,60 610,110" fill="#161b22" stroke="#d4af37" stroke-width="3"/>
-    <line x1="555" y1="60" x2="555" y2="35" stroke="#d4af37" stroke-width="3"/>
-    <line x1="543" y1="45" x2="567" y2="45" stroke="#d4af37" stroke-width="3"/>
+    <!-- chapel, the landmark - taller, gold outline, glowing -->
+    <g filter="url(#glow)">
+      <rect x="500" y="110" width="110" height="210" fill="url(#panelGradient)" stroke="#d4af37" stroke-width="3"/>
+      <polygon points="500,110 555,60 610,110" fill="url(#panelGradient)" stroke="#d4af37" stroke-width="3"/>
+      <line x1="555" y1="60" x2="555" y2="35" stroke="#d4af37" stroke-width="3"/>
+      <line x1="543" y1="45" x2="567" y2="45" stroke="#d4af37" stroke-width="3"/>
+    </g>
 
-    <!-- a few lit windows -->
+    <!-- lit windows -->
     <rect x="45" y="200" width="14" height="14" fill="#f0f6fc" opacity="0.5"/>
     <rect x="75" y="230" width="14" height="14" fill="#f0f6fc" opacity="0.5"/>
     <rect x="150" y="160" width="14" height="14" fill="#f0f6fc" opacity="0.5"/>
     <rect x="970" y="230" width="14" height="14" fill="#f0f6fc" opacity="0.5"/>
+    <rect x="540" y="150" width="14" height="14" fill="#ffd76b" opacity="0.85"/>
+    <rect x="565" y="200" width="14" height="14" fill="#ffd76b" opacity="0.85"/>
 
-    <!-- coin icon -->
-    <circle cx="960" cy="70" r="34" fill="#d29922" stroke="#8a6d1f" stroke-width="3"/>
-    <text x="960" y="80" text-anchor="middle" font-size="34" font-weight="bold" fill="#161b22">$</text>
+    <!-- coin icon, glowing -->
+    <g filter="url(#glow)">
+      <circle cx="960" cy="70" r="34" fill="#d29922" stroke="#8a6d1f" stroke-width="3"/>
+      <text x="960" y="80" text-anchor="middle" font-size="34" font-weight="bold" fill="#161b22">$</text>
+    </g>
 
     <!-- street-level car -->
-    <rect x="330" y="290" width="120" height="30" rx="10" fill="#58a6ff" stroke="#1f6feb" stroke-width="2"/>
-    <rect x="350" y="270" width="70" height="26" rx="8" fill="#58a6ff" stroke="#1f6feb" stroke-width="2"/>
-    <circle cx="355" cy="322" r="12" fill="#0d1117" stroke="#8b949e" stroke-width="2"/>
-    <circle cx="425" cy="322" r="12" fill="#0d1117" stroke="#8b949e" stroke-width="2"/>
+    <g filter="url(#dropshadow)">
+      <rect x="330" y="290" width="120" height="30" rx="10" fill="#58a6ff" stroke="#1f6feb" stroke-width="2"/>
+      <rect x="350" y="270" width="70" height="26" rx="8" fill="#58a6ff" stroke="#1f6feb" stroke-width="2"/>
+      <circle cx="355" cy="322" r="12" fill="#0d1117" stroke="#8b949e" stroke-width="2"/>
+      <circle cx="425" cy="322" r="12" fill="#0d1117" stroke="#8b949e" stroke-width="2"/>
+    </g>
   </svg>
-  <p class="caption">What if every street in GTA ran on a living economy? Trade markets, build a property empire, break the law, or chase love and luck—the money behind every choice changes the city around you.</p>
+  <p class="caption">What if a finance simulator gave you the freedom of GTA—and the consequences of a real market? Trade stocks, build a property empire, take wild risks, and watch every choice reshape your city.</p>
 </body>
 </html>

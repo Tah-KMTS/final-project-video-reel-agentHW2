@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Slide 4 - Next: Make the World Feel Alive</title>
+<title>Slide 4 - The Goal</title>
 <style>
   body {
     margin: 0;
     width: 1280px;
     height: 720px;
-    background: #0d1117;
+    background: radial-gradient(circle at 50% 25%, #1a2036 0%, #0d1117 65%);
     color: #f0f6fc;
     font-family: 'Segoe UI', sans-serif;
     display: flex;
@@ -18,33 +18,77 @@
     box-sizing: border-box;
     padding: 40px;
   }
-  h1 { font-size: 36px; margin-bottom: 10px; }
-  .caption { font-size: 20px; max-width: 900px; text-align: center; margin-top: 20px; color: #c9d1d9; }
+  h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #79c0ff, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+  }
+  .caption {
+    font-size: 20px;
+    max-width: 920px;
+    text-align: center;
+    margin-top: 26px;
+    color: #c9d1d9;
+    line-height: 1.5;
+  }
   .box-label { font-size: 18px; font-weight: bold; fill: #f0f6fc; }
 </style>
 </head>
 <body>
-  <h1>Next: Make the World Feel Alive</h1>
-  <svg width="1100" height="300" viewBox="0 0 1100 300">
+  <h1>The Goal</h1>
+  <svg width="1100" height="340" viewBox="0 0 1100 340">
     <defs>
-      <marker id="roadmapArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-        <path d="M0,0 L10,5 L0,10 Z" fill="#8b949e"/>
-      </marker>
-    </defs>
-    <line x1="60" y1="150" x2="1040" y2="150" stroke="#30363d" stroke-width="4" marker-end="url(#roadmapArrow)"/>
+      <linearGradient id="panelGradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1c2333"/>
+        <stop offset="100%" stop-color="#0d1117"/>
+      </linearGradient>
+      <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+        <feGaussianBlur stdDeviation="6" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+      <filter id="dropshadow" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+      </filter>
+</defs>
 
-    <circle cx="120" cy="150" r="28" fill="#161b22" stroke="#58a6ff" stroke-width="3"/>
-    <text x="120" y="200" text-anchor="middle" class="box-label" font-size="15">Smarter NPCs</text>
+    <line x1="60" y1="300" x2="1040" y2="300" stroke="#30363d" stroke-width="3"/>
 
-    <circle cx="380" cy="150" r="28" fill="#161b22" stroke="#f78166" stroke-width="3"/>
-    <text x="380" y="110" text-anchor="middle" class="box-label" font-size="15">Phone UI</text>
+    <!-- 5-tier milestone ladder: the real win condition -->
+    <rect x="90"  y="260" width="100" height="40"  rx="8" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="2"/>
+    <text x="140" y="245" text-anchor="middle" class="box-label" font-size="16">$50k</text>
 
-    <circle cx="640" cy="150" r="28" fill="#161b22" stroke="#3fb950" stroke-width="3"/>
-    <text x="640" y="200" text-anchor="middle" class="box-label" font-size="15">Social &#8594; Price</text>
+    <rect x="230" y="220" width="100" height="80"  rx="8" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="2"/>
+    <text x="280" y="205" text-anchor="middle" class="box-label" font-size="16">$250k</text>
 
-    <circle cx="900" cy="150" r="28" fill="#161b22" stroke="#d29922" stroke-width="3"/>
-    <text x="900" y="110" text-anchor="middle" class="box-label" font-size="15">Crime &amp; Jail</text>
+    <rect x="370" y="170" width="100" height="130" rx="8" fill="url(#panelGradient)" stroke="#f78166" stroke-width="2"/>
+    <text x="420" y="155" text-anchor="middle" class="box-label" font-size="16">$1M</text>
+
+    <rect x="510" y="110" width="100" height="190" rx="8" fill="url(#panelGradient)" stroke="#f78166" stroke-width="2"/>
+    <text x="560" y="95" text-anchor="middle" class="box-label" font-size="16">$5M</text>
+
+    <g filter="url(#glow)">
+      <rect x="650" y="50" width="110" height="250" rx="8" fill="url(#panelGradient)" stroke="#d29922" stroke-width="3"/>
+    </g>
+    <text x="705" y="35" text-anchor="middle" class="box-label" font-size="20">$10M</text>
+    <text x="705" y="150" text-anchor="middle" class="box-label" font-size="15" fill="#d29922">THE</text>
+    <text x="705" y="172" text-anchor="middle" class="box-label" font-size="15" fill="#d29922">REAL</text>
+    <text x="705" y="194" text-anchor="middle" class="box-label" font-size="15" fill="#d29922">WIN</text>
+
+    <!-- flex goal beyond - deliberately faded/dashed, not the real target -->
+    <line x1="820" y1="300" x2="820" y2="40" stroke="#30363d" stroke-width="2" stroke-dasharray="6,6"/>
+    <rect x="860" y="70" width="150" height="230" rx="8" fill="none" stroke="#8b949e" stroke-width="2" stroke-dasharray="8,6" opacity="0.6"/>
+    <text x="935" y="55" text-anchor="middle" class="box-label" font-size="16" fill="#8b949e" opacity="0.8">$1B</text>
+    <text x="935" y="190" text-anchor="middle" font-size="14" fill="#8b949e" opacity="0.8">flex goal</text>
+    <text x="935" y="210" text-anchor="middle" font-size="14" fill="#8b949e" opacity="0.8">(optional)</text>
   </svg>
-  <p class="caption">Now the city starts to feel truly alive. Smarter NPCs, connected social markets, high-stakes crime systems, and richer art turn a working prototype into a world that reacts, surprises, and keeps moving.</p>
+  <p class="caption">This is the climb that matters: turn $50K into a $10 million fortune, one milestone at a time. Hit $10M to win—then chase the $1B flex goal only if you want the ultimate bragging rights.</p>
 </body>
 </html>

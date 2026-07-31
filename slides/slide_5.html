@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Slide 5 - How It's Built</title>
+<style>
+  body {
+    margin: 0;
+    width: 1280px;
+    height: 720px;
+    background: radial-gradient(circle at 50% 25%, #1a2036 0%, #0d1117 65%);
+    color: #f0f6fc;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 40px;
+  }
+  h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #79c0ff, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+  }
+  .caption {
+    font-size: 20px;
+    max-width: 920px;
+    text-align: center;
+    margin-top: 26px;
+    color: #c9d1d9;
+    line-height: 1.5;
+  }
+  .box-label { font-size: 18px; font-weight: bold; fill: #f0f6fc; }
+</style>
+</head>
+<body>
+  <h1>How It's Built</h1>
+  <svg width="1100" height="300" viewBox="0 0 1100 300">
+    <defs>
+      <linearGradient id="panelGradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1c2333"/>
+        <stop offset="100%" stop-color="#0d1117"/>
+      </linearGradient>
+      <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+        <feGaussianBlur stdDeviation="6" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+      <filter id="dropshadow" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+      </filter>
+
+      <marker id="buildArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 Z" fill="#8b949e"/>
+      </marker>
+    </defs>
+
+    <!-- 10 specialist agents, 2 rows of 5 -->
+    <g class="box-label">
+      <rect x="20"  y="60"  width="140" height="42" rx="10" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="2"/>
+      <text x="90" y="86" text-anchor="middle" font-size="12" fill="#f0f6fc">Producer</text>
+
+      <rect x="172" y="60"  width="140" height="42" rx="10" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="2"/>
+      <text x="242" y="86" text-anchor="middle" font-size="12" fill="#f0f6fc">Game Designer</text>
+
+      <rect x="324" y="60"  width="140" height="42" rx="10" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="2"/>
+      <text x="394" y="86" text-anchor="middle" font-size="12" fill="#f0f6fc">World-Builder</text>
+
+      <rect x="476" y="60"  width="140" height="42" rx="10" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="2"/>
+      <text x="546" y="86" text-anchor="middle" font-size="12" fill="#f0f6fc">Gameplay Eng.</text>
+
+      <rect x="628" y="60"  width="140" height="42" rx="10" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="2"/>
+      <text x="698" y="86" text-anchor="middle" font-size="12" fill="#f0f6fc">Art Director</text>
+
+      <rect x="20"  y="120" width="140" height="42" rx="10" fill="url(#panelGradient)" stroke="#f78166" stroke-width="2"/>
+      <text x="90" y="146" text-anchor="middle" font-size="12" fill="#f0f6fc">Visual Polish</text>
+
+      <rect x="172" y="120" width="140" height="42" rx="10" fill="url(#panelGradient)" stroke="#f78166" stroke-width="2"/>
+      <text x="242" y="146" text-anchor="middle" font-size="12" fill="#f0f6fc">Tech Artist</text>
+
+      <rect x="324" y="120" width="140" height="42" rx="10" fill="url(#panelGradient)" stroke="#f78166" stroke-width="2"/>
+      <text x="394" y="146" text-anchor="middle" font-size="12" fill="#f0f6fc">Audio Director</text>
+
+      <rect x="476" y="120" width="140" height="42" rx="10" fill="url(#panelGradient)" stroke="#f78166" stroke-width="2"/>
+      <text x="546" y="146" text-anchor="middle" font-size="12" fill="#f0f6fc">Writer</text>
+
+      <rect x="628" y="120" width="140" height="42" rx="10" fill="url(#panelGradient)" stroke="#f78166" stroke-width="2"/>
+      <text x="698" y="146" text-anchor="middle" font-size="12" fill="#f0f6fc">QA Tester</text>
+    </g>
+
+    <path d="M780 120 L840 120" stroke="#8b949e" stroke-width="4" marker-end="url(#buildArrow)"/>
+
+    <g filter="url(#glow)">
+      <rect x="850" y="60" width="220" height="180" rx="16" fill="url(#panelGradient)" stroke="#3fb950" stroke-width="3"/>
+    </g>
+    <text x="960" y="140" text-anchor="middle" class="box-label" font-size="17">Capital</text>
+    <text x="960" y="162" text-anchor="middle" class="box-label" font-size="17">Syndicate</text>
+  </svg>
+  <p class="caption">No lone genius here—this game is built by a coordinated fleet of ten AI specialists. Each owns one narrow job, from world-building to gameplay, audio, writing, and QA, turning a messy challenge into a pipeline of verifiable results.</p>
+</body>
+</html>
