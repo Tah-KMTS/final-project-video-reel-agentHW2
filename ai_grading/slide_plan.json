@@ -1,0 +1,20 @@
+{
+  "slides": [
+    {
+      "description": "Slide 1 — Hook: Full-bleed top-down pixel-art city map with a bold title card: “CAPITAL SYNDICATE” and subtitle “A finance-themed open world.” Around the player avatar, use small illustrated callouts/icons: stock chart, house, stolen car, smartphone heart/message, jail bars, fishing rod, chapel, and casino chips. Add a short lower-third: “Live the financial reality you can’t access in real life.”",
+      "narration": "Imagine GTA, but the city runs on money. You can trade stocks, buy property, steal cars, flirt with NPCs, commit crimes, go fishing or to church, and gamble with real in-game stakes—all inside one living financial sandbox."
+    },
+    {
+      "description": "Slide 2 — Visual playground: Three-panel gameplay montage. Left: the player driving through the city past recognizable hub buildings. Center: a bright Neon Dragon Casino scene with Blackjack cards, Poker chips, Slots reels, and a risk or luck meter. Right: the hand-authored Whispering Temple Chapel landmark, shown as a striking focal point on the map. Overlay labels: “Drive,” “Risk it,” and “Explore.”",
+      "narration": "The fun is physical and visual: drive across the city, take chances in casino mini-games, and explore landmarks like the Whispering Temple Chapel. Every location turns finance into something you can move through, touch, and play."
+    },
+    {
+      "description": "Slide 3 — AI market loop: Show a smartphone Social/X interface on the left with an AI-generated NPC post, such as “Everyone’s piling into SYND!” On the right, animate an upward stock-price chart and a sentiment meter labeled “Hype.” Include a second phone/chat panel below with an NPC texting the player, labeled “AI-generated conversations.” Use arrows connecting “AI post” → “sentiment” → “market price,” plus a small caption: “The feed changes the world.”",
+      "narration": "This is the core experiment: an AI-generated social feed doesn’t just decorate the game—it can move stock prices and crypto hype. The NPCs you text are AI-generated too, so social influence and personal relationships become part of the same playable loop."
+    },
+    {
+      "description": "Slide 4 — What’s next: Roadmap displayed as five illustrated cards across a city-background gradient: “More alive NPCs” with a character portrait; “Finish the smartphone UI” with a phone mockup; “Posts linked to prices” with social and stock icons connected; “Crime, jail, bribes & escapes” with handcuffs and a jail door; and “Richer art” with upgraded character and building sprites. Add a final footer: “From playable system to living financial world.”",
+      "narration": "Next, we’re pushing the world from functional to alive: smarter NPC behavior, a finished smartphone interface, and direct links from social posts to stock, crypto, and real-estate prices. We’ll also deepen the crime and jail system—bribe your way out or escape—and upgrade the character and building art."
+    }
+  ]
+}
