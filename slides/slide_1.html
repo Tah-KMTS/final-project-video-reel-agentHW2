@@ -2,29 +2,67 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Slide 1</title>
+<title>Slide 1 - Live Inside the System</title>
 <style>
   body {
     margin: 0;
     width: 1280px;
     height: 720px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Segoe UI', sans-serif;
     background: #0d1117;
     color: #f0f6fc;
-    text-align: center;
-    padding: 60px;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
+    padding: 40px;
   }
-  h1 { font-size: 40px; margin-bottom: 24px; }
-  p { font-size: 24px; line-height: 1.4; max-width: 900px; }
+  h1 { font-size: 36px; margin-bottom: 10px; }
+  .caption { font-size: 20px; max-width: 900px; text-align: center; margin-top: 20px; color: #c9d1d9; }
+  .box-label { font-size: 18px; font-weight: bold; fill: #f0f6fc; }
 </style>
 </head>
 <body>
-  <h1>Slide 1</h1>
-  <p>Slide 1 — Hook: Full-bleed top-down pixel-art city at night, with a glowing market district, luxury towers, police blockade, and casino quarter visible in the map. Center the avatar beneath a bold title card: “CAPITAL SYNDICATE.” Subtitle: “A city where every choice has a price.” Use only three illustrated callouts: a rising stock chart over the exchange, a car-and-police-light icon near downtown, and a house/heart/chips cluster near the residential and casino districts. Small footer: “Play the economy. Live the consequences.”</p>
+  <h1>Live Inside the System</h1>
+  <svg width="1100" height="340" viewBox="0 0 1100 340">
+    <defs>
+      <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#161b3a"/>
+        <stop offset="100%" stop-color="#0d1117"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="1100" height="340" fill="url(#skyGradient)"/>
+
+    <!-- skyline -->
+    <rect x="30"  y="180" width="90"  height="140" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+    <rect x="130" y="130" width="70"  height="190" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+    <rect x="210" y="210" width="100" height="110" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+    <rect x="850" y="160" width="80"  height="160" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+    <rect x="950" y="200" width="110" height="120" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+
+    <!-- chapel, the landmark - taller, gold outline -->
+    <rect x="500" y="110" width="110" height="210" fill="#161b22" stroke="#d4af37" stroke-width="3"/>
+    <polygon points="500,110 555,60 610,110" fill="#161b22" stroke="#d4af37" stroke-width="3"/>
+    <line x1="555" y1="60" x2="555" y2="35" stroke="#d4af37" stroke-width="3"/>
+    <line x1="543" y1="45" x2="567" y2="45" stroke="#d4af37" stroke-width="3"/>
+
+    <!-- a few lit windows -->
+    <rect x="45" y="200" width="14" height="14" fill="#f0f6fc" opacity="0.5"/>
+    <rect x="75" y="230" width="14" height="14" fill="#f0f6fc" opacity="0.5"/>
+    <rect x="150" y="160" width="14" height="14" fill="#f0f6fc" opacity="0.5"/>
+    <rect x="970" y="230" width="14" height="14" fill="#f0f6fc" opacity="0.5"/>
+
+    <!-- coin icon -->
+    <circle cx="960" cy="70" r="34" fill="#d29922" stroke="#8a6d1f" stroke-width="3"/>
+    <text x="960" y="80" text-anchor="middle" font-size="34" font-weight="bold" fill="#161b22">$</text>
+
+    <!-- street-level car -->
+    <rect x="330" y="290" width="120" height="30" rx="10" fill="#58a6ff" stroke="#1f6feb" stroke-width="2"/>
+    <rect x="350" y="270" width="70" height="26" rx="8" fill="#58a6ff" stroke="#1f6feb" stroke-width="2"/>
+    <circle cx="355" cy="322" r="12" fill="#0d1117" stroke="#8b949e" stroke-width="2"/>
+    <circle cx="425" cy="322" r="12" fill="#0d1117" stroke="#8b949e" stroke-width="2"/>
+  </svg>
+  <p class="caption">What if every street in GTA ran on a living economy? Trade markets, build a property empire, break the law, or chase love and luck—the money behind every choice changes the city around you.</p>
 </body>
 </html>

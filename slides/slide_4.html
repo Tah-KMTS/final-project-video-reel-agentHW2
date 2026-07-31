@@ -2,38 +2,49 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Slide 4</title>
+<title>Slide 4 - Next: Make the World Feel Alive</title>
 <style>
   body {
     margin: 0;
     width: 1280px;
     height: 720px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Segoe UI', sans-serif;
     background: #0d1117;
     color: #f0f6fc;
-    text-align: center;
-    padding: 60px;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
+    padding: 40px;
   }
-  h1 { font-size: 40px; margin-bottom: 24px; }
-  p { font-size: 24px; line-height: 1.4; max-width: 900px; }
+  h1 { font-size: 36px; margin-bottom: 10px; }
+  .caption { font-size: 20px; max-width: 900px; text-align: center; margin-top: 20px; color: #c9d1d9; }
+  .box-label { font-size: 18px; font-weight: bold; fill: #f0f6fc; }
 </style>
 </head>
 <body>
-  <h1>Slide 4</h1>
-  <p>Slide 4 — “Next: Make the City Come Alive”
+  <h1>Next: Make the World Feel Alive</h1>
+  <svg width="1100" height="300" viewBox="0 0 1100 300">
+    <defs>
+      <marker id="roadmapArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 Z" fill="#8b949e"/>
+      </marker>
+    </defs>
+    <line x1="60" y1="150" x2="1040" y2="150" stroke="#30363d" stroke-width="4" marker-end="url(#roadmapArrow)"/>
 
-Show a left-to-right roadmap over a vibrant city-at-dusk gradient, with five large illustrated milestones connected by a glowing route:
-1. “Alive NPCs” — expressive character portrait
-2. “Smartphone UI” — polished phone mockup
-3. “Social → Prices” — post icon flowing into stock, crypto, and property icons
-4. “Crime & Escape” — handcuffs, jail door, and getaway arrow
-5. “Richer Art” — before/after character and building sprites
+    <circle cx="120" cy="150" r="28" fill="#161b22" stroke="#58a6ff" stroke-width="3"/>
+    <text x="120" y="200" text-anchor="middle" class="box-label" font-size="15">Smarter NPCs</text>
 
-Use minimal labels, oversized visuals, and a single footer: “From playable system to living financial world.”</p>
+    <circle cx="380" cy="150" r="28" fill="#161b22" stroke="#f78166" stroke-width="3"/>
+    <text x="380" y="110" text-anchor="middle" class="box-label" font-size="15">Phone UI</text>
+
+    <circle cx="640" cy="150" r="28" fill="#161b22" stroke="#3fb950" stroke-width="3"/>
+    <text x="640" y="200" text-anchor="middle" class="box-label" font-size="15">Social &#8594; Price</text>
+
+    <circle cx="900" cy="150" r="28" fill="#161b22" stroke="#d29922" stroke-width="3"/>
+    <text x="900" y="110" text-anchor="middle" class="box-label" font-size="15">Crime &amp; Jail</text>
+  </svg>
+  <p class="caption">Now the city starts to feel truly alive. Smarter NPCs, connected social markets, high-stakes crime systems, and richer art turn a working prototype into a world that reacts, surprises, and keeps moving.</p>
 </body>
 </html>

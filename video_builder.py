@@ -2,7 +2,7 @@
 
 from moviepy import AudioFileClip, ImageClip, concatenate_videoclips
 
-DEFAULT_SLIDE_SECONDS = 5.0
+DEFAULT_SLIDE_SECONDS = 10.0
 
 
 def build_video(
