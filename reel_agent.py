@@ -8,11 +8,9 @@ Pipeline:
   2. Ask the agent for a structured 4-6 slide plan (Pydantic model) [DONE]
   3. Critique + revise each slide/narration pair, in parallel       [DONE]
   4. Render each (revised) slide as HTML, screenshot to PNG         [DONE]
-  5. Synthesize TTS narration per slide                    [BLOCKED - see
-     project_proposal.md / conversation history: this API key has no
-     working TTS access. build_video() below runs with placeholder
-     fixed-length slides until that's unblocked.]
-  6. Stitch slide images (+ audio once unblocked) into reel.mp4     [DONE]
+  5. Synthesize TTS narration per slide (gpt-4o-mini-tts)           [DONE]
+  6. Stitch slide images + audio into reel.mp4, each clip's         [DONE]
+     duration matching its narration
   7. Write ai_grading/slide_plan.json          [DONE]
      ai_grading/critique_feedback.json         [DONE]
      ai_grading/agent_flow.png
@@ -25,6 +23,7 @@ from html_renderer import render_slides
 from models import CritiqueReport, Slide, SlidePlan
 from screenshot import screenshot_all
 from slide_planner import generate_slide_plan, load_proposal
+from tts_renderer import render_audio
 from video_builder import build_video
 
 
@@ -73,7 +72,10 @@ def main() -> None:
     png_paths = screenshot_all(html_paths)
     print(f"Wrote {len(png_paths)} slide screenshots")
 
-    build_video(png_paths, audio_paths=None, out_path="reel.mp4")
+    audio_paths = render_audio(final_slides)
+    print(f"Wrote {len(audio_paths)} narration clips")
+
+    build_video(png_paths, audio_paths=audio_paths, out_path="reel.mp4")
     print("Wrote reel.mp4")
 
 

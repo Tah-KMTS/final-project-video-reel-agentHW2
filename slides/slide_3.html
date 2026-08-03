@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Slide 3 - The Feed Moves the Market</title>
+<title>Slide 3 - AI Is Part of the Game Loop</title>
 <style>
   body {
     margin: 0;
@@ -40,8 +40,8 @@
 </style>
 </head>
 <body>
-  <h1>The Feed Moves the Market</h1>
-  <svg width="1100" height="360" viewBox="0 0 1100 360">
+  <h1>AI Is Part of the Game Loop</h1>
+  <svg width="1000" height="360" viewBox="0 0 1000 360">
     <defs>
       <linearGradient id="panelGradient" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#1c2333"/>
@@ -58,45 +58,76 @@
         <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
       </filter>
 
-      <linearGradient id="sentimentGradient" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#f85149"/>
-        <stop offset="50%" stop-color="#d29922"/>
-        <stop offset="100%" stop-color="#3fb950"/>
-      </linearGradient>
-      <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <marker id="feedArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
         <path d="M0,0 L10,5 L0,10 Z" fill="#8b949e"/>
       </marker>
     </defs>
 
-    <!-- Box 1: AI social post -->
-    <rect x="20" y="120" width="220" height="120" rx="16" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="3" filter="url(#dropshadow)"/>
-    <text x="130" y="165" text-anchor="middle" class="box-label">AI-Generated</text>
-    <text x="130" y="190" text-anchor="middle" class="box-label">Social Post</text>
-    <g filter="url(#glow)">
-      <text x="130" y="222" text-anchor="middle" font-size="28">&#128241;</text>
+    <!-- faint city skyline behind the phone, for depth -->
+    <g opacity="0.18" fill="#58a6ff">
+      <rect x="60" y="180" width="50" height="150"/>
+      <rect x="120" y="140" width="40" height="190"/>
+      <rect x="850" y="160" width="45" height="170"/>
+      <rect x="905" y="200" width="55" height="130"/>
     </g>
 
-    <path d="M250 180 L340 180" stroke="#8b949e" stroke-width="4" marker-end="url(#arrow)"/>
-
-    <!-- Box 2: Sentiment meter -->
-    <rect x="350" y="120" width="260" height="120" rx="16" fill="url(#panelGradient)" stroke="#f78166" stroke-width="3" filter="url(#dropshadow)"/>
-    <text x="480" y="150" text-anchor="middle" class="box-label">Sentiment Meter</text>
-    <g filter="url(#glow)">
-      <rect x="375" y="175" width="210" height="18" rx="9" fill="url(#sentimentGradient)"/>
-      <circle cx="530" cy="184" r="9" fill="#f0f6fc" stroke="#0d1117" stroke-width="2"/>
+    <!-- faint ambient particles drifting near the phone -->
+    <g opacity="0.18" stroke="#8b949e" fill="none" stroke-width="2">
+      <path d="M270 40 c-6,-8 -18,-2 -18,7 c0,8 9,12 18,20 c9,-8 18,-12 18,-20 c0,-9 -12,-15 -18,-7 z"/>
+      <circle cx="735" cy="45" r="14"/>
+      <path d="M730 42 l10 6 l-10 6 z" fill="#8b949e"/>
+      <text x="750" y="335" font-size="20" fill="#8b949e" stroke="none">$</text>
     </g>
-    <text x="480" y="222" text-anchor="middle" font-size="14" fill="#c9d1d9">panic &#8594; hype</text>
 
-    <path d="M620 180 L710 180" stroke="#8b949e" stroke-width="4" marker-end="url(#arrow)"/>
-
-    <!-- Box 3: Stock price chart -->
-    <rect x="720" y="120" width="360" height="180" rx="16" fill="url(#panelGradient)" stroke="#3fb950" stroke-width="3" filter="url(#dropshadow)"/>
-    <text x="900" y="150" text-anchor="middle" class="box-label">Stock Price</text>
-    <g filter="url(#glow)">
-      <polyline points="740,240 780,220 820,255 860,190 900,210 940,160 980,180 1020,140 1060,150"
-                fill="none" stroke="#3fb950" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- phone body, centered -->
+    <g filter="url(#dropshadow)">
+      <rect x="360" y="15" width="280" height="330" rx="30" fill="#161b22" stroke="#30363d" stroke-width="4"/>
+      <rect x="378" y="40" width="244" height="280" rx="10" fill="url(#panelGradient)"/>
+      <rect x="455" y="24" width="90" height="8" rx="4" fill="#30363d"/>
     </g>
+
+    <!-- row 1: social post -> rising chart -->
+    <rect x="392" y="54" width="216" height="78" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+    <g filter="url(#glow)">
+      <circle cx="416" cy="80" r="12" fill="#58a6ff"/>
+      <polyline points="560,110 578,95 592,105 608,78" fill="none" stroke="#3fb950" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="440" y="76" font-size="11" fill="#c9d1d9">"$NOVA to the moon"</text>
+    <text x="500" y="122" text-anchor="middle" font-size="12" fill="#3fb950" font-weight="bold">MOVE MARKETS</text>
+
+    <!-- row 2: NPC portrait + heart chat -->
+    <rect x="392" y="142" width="216" height="78" rx="10" fill="#161b22" stroke="#f78166" stroke-width="2"/>
+    <g filter="url(#glow)">
+      <!-- historical-figure NPC bust silhouette -->
+      <circle cx="418" cy="176" r="12" fill="#d29922" stroke="#8a6d1f" stroke-width="2"/>
+      <path d="M400 200 q18 -16 36 0 l0 8 l-36 0 z" fill="#d29922" stroke="#8a6d1f" stroke-width="2"/>
+      <path d="M572 172 c-8,-10 -24,-3 -24,9 c0,10 12,16 24,26 c12,-10 24,-16 24,-26 c0,-12 -16,-19 -24,-9 z" fill="#f78166"/>
+    </g>
+    <text x="500" y="210" text-anchor="middle" font-size="12" fill="#f78166" font-weight="bold">BUILD RELATIONSHIPS</text>
+
+    <!-- row 3: AI assistant Q&A -->
+    <rect x="392" y="230" width="216" height="78" rx="10" fill="#161b22" stroke="#d29922" stroke-width="2"/>
+    <g filter="url(#glow)">
+      <circle cx="418" cy="255" r="14" fill="#0d1117" stroke="#d29922" stroke-width="2"/>
+      <text x="418" y="260" text-anchor="middle" font-size="14" fill="#d29922">?</text>
+    </g>
+    <text x="440" y="252" font-size="10" fill="#c9d1d9">"How does short-selling work?"</text>
+    <text x="440" y="270" font-size="10" fill="#3fb950">assistant is typing&#8230;</text>
+    <text x="500" y="298" text-anchor="middle" font-size="12" fill="#d29922" font-weight="bold">GET ANSWERS</text>
+
+    <!-- side callouts -->
+    <text x="180" y="90" text-anchor="middle" class="box-label" font-size="16" fill="#58a6ff">AI-generated posts</text>
+    <text x="180" y="115" text-anchor="middle" font-size="13" fill="#8b949e">move real prices</text>
+    <path d="M280 100 L370 90" stroke="#8b949e" stroke-width="3" marker-end="url(#feedArrow)"/>
+
+    <text x="820" y="180" text-anchor="middle" class="box-label" font-size="16" fill="#f78166">76 historical NPCs</text>
+    <text x="820" y="205" text-anchor="middle" font-size="13" fill="#8b949e">chat &#183; date &#183; remember</text>
+    <path d="M720 181 L630 181" stroke="#8b949e" stroke-width="3" marker-end="url(#feedArrow)"/>
+
+    <text x="180" y="270" text-anchor="middle" class="box-label" font-size="16" fill="#d29922">Ask anything</text>
+    <text x="180" y="295" text-anchor="middle" font-size="13" fill="#8b949e">no more guessing</text>
+    <path d="M280 268 L370 260" stroke="#8b949e" stroke-width="3" marker-end="url(#feedArrow)"/>
   </svg>
-  <p class="caption">One post can send the whole city into motion—sparking hype, panic, and sudden market swings. As prices move, AI-driven NPCs react, remember, and let those conversations reshape your life.</p>
+  <p class="caption">Your phone is part of the game: posts move markets, NPCs chat and date you, and an AI assistant always answers.</p>
 </body>
 </html>

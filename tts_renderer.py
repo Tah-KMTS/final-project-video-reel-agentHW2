@@ -11,7 +11,7 @@ load_dotenv()
 
 client = OpenAI()
 
-TTS_MODEL = "tts-1"
+TTS_MODEL = "tts-1-hd"
 TTS_VOICE = "alloy"
 
 
