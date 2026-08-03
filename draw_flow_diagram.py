@@ -10,9 +10,9 @@ NODES = [
     ("critique_all()\n(critique.py)\nAgent: gpt-5.6-luna\n(parallel: asyncio.gather)", "in: list[Slide]\nout: CritiqueReport\n(per-slide critique\n+ revised text)", 2, 4),
     ("apply_critique()\n(reel_agent.py)", "in: SlidePlan + CritiqueReport\nout: final list[Slide]", 3, 4),
     ("render_slides()\n(html_renderer.py)", "in: list[Slide]\nout: slides/*.html", 4, 5.2),
-    ("synthesize_narration()\n(tts_renderer.py)\n[BLOCKED - no TTS\nmodel access]", "in: narration text\nout: slides/*.mp3", 4, 2.8),
+    ("render_audio()\n(tts_renderer.py)\nModel: tts-1-hd", "in: narration text\nout: slides/*.mp3", 4, 2.8),
     ("screenshot_all()\n(screenshot.py)", "in: slides/*.html\nout: slides/*.png", 5, 5.2),
-    ("build_video()\n(video_builder.py)", "in: slides/*.png\n(+ slides/*.mp3 once\nunblocked)\nout: reel.mp4", 6, 4),
+    ("build_video()\n(video_builder.py)", "in: slides/*.png\n+ slides/*.mp3\nout: reel.mp4", 6, 4),
 ]
 
 EDGES = [
@@ -30,9 +30,8 @@ box_w, box_h = 0.9, 1.3
 centers = {}
 
 for i, (title, io, x, y) in enumerate(NODES):
-    blocked = "BLOCKED" in title
-    color = "#f8d7da" if blocked else "#d7e3fc"
-    edge = "#dc3545" if blocked else "#4361ee"
+    color = "#d7e3fc"
+    edge = "#4361ee"
     box = FancyBboxPatch(
         (x - box_w / 2, y - box_h / 2), box_w, box_h,
         boxstyle="round,pad=0.05", linewidth=1.5,
