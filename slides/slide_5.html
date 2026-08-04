@@ -19,7 +19,7 @@
     padding: 40px;
   }
   h1 {
-    font-size: 42px;
+    font-size: 48px;
     margin-bottom: 8px;
     font-weight: 800;
     background: linear-gradient(90deg, #79c0ff, #d4af37);
@@ -29,19 +29,19 @@
     filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
   }
   .caption {
-    font-size: 20px;
-    max-width: 920px;
+    font-size: 24px;
+    max-width: 960px;
     text-align: center;
-    margin-top: 26px;
+    margin-top: 22px;
     color: #c9d1d9;
     line-height: 1.5;
   }
-  .box-label { font-size: 18px; font-weight: bold; fill: #f0f6fc; }
+  .box-label { font-size: 22px; font-weight: bold; fill: #f0f6fc; }
 </style>
 </head>
 <body>
   <h1>Built by a Fleet, Not a Generalist</h1>
-  <svg width="580" height="486" viewBox="190 0 620 520">
+  <svg width="1000" height="440" viewBox="0 0 1000 480">
     <defs>
       <linearGradient id="panelGradient" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#1c2333"/>
@@ -57,70 +57,48 @@
       <filter id="dropshadow" x="-30%" y="-30%" width="160%" height="160%">
         <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
       </filter>
-</defs>
+    </defs>
 
-    <!-- faint dashed wheel track -->
-    <circle cx="500" cy="260" r="200" fill="none" stroke="#30363d" stroke-width="2" stroke-dasharray="4,8" opacity="0.5"/>
-
-    <!-- spokes, colored per phase -->
-    <line x1="500" y1="175" x2="500" y2="60"   stroke="#58a6ff" stroke-width="2" opacity="0.4"/>
-    <line x1="550" y1="191" x2="618" y2="98"   stroke="#58a6ff" stroke-width="2" opacity="0.4"/>
-    <line x1="581" y1="234" x2="690" y2="198"  stroke="#58a6ff" stroke-width="2" opacity="0.4"/>
-    <line x1="581" y1="286" x2="690" y2="322"  stroke="#f78166" stroke-width="2" opacity="0.4"/>
-    <line x1="550" y1="329" x2="618" y2="422"  stroke="#f78166" stroke-width="2" opacity="0.4"/>
-    <line x1="500" y1="345" x2="500" y2="460"  stroke="#bc8cff" stroke-width="2" opacity="0.4"/>
-    <line x1="450" y1="329" x2="382" y2="422"  stroke="#bc8cff" stroke-width="2" opacity="0.4"/>
-    <line x1="419" y1="286" x2="310" y2="322"  stroke="#bc8cff" stroke-width="2" opacity="0.4"/>
-    <line x1="419" y1="234" x2="310" y2="198"  stroke="#bc8cff" stroke-width="2" opacity="0.4"/>
-    <line x1="450" y1="191" x2="382" y2="98"   stroke="#3fb950" stroke-width="2" opacity="0.4"/>
+    <!-- spokes: hub to each phase panel -->
+    <line x1="500" y1="162" x2="500" y2="125" stroke="#58a6ff" stroke-width="3" opacity="0.6"/>
+    <line x1="578" y1="240" x2="690" y2="240" stroke="#f78166" stroke-width="3" opacity="0.6"/>
+    <line x1="500" y1="318" x2="500" y2="330" stroke="#bc8cff" stroke-width="3" opacity="0.6"/>
+    <line x1="422" y1="240" x2="310" y2="240" stroke="#3fb950" stroke-width="3" opacity="0.6"/>
 
     <!-- center hub: the shipped build -->
     <g filter="url(#glow)">
-      <circle cx="500" cy="260" r="85" fill="url(#panelGradient)" stroke="#3fb950" stroke-width="3"/>
+      <circle cx="500" cy="240" r="78" fill="url(#panelGradient)" stroke="#d4af37" stroke-width="3"/>
     </g>
-    <text x="500" y="255" text-anchor="middle" class="box-label" font-size="17">Capital</text>
-    <text x="500" y="277" text-anchor="middle" class="box-label" font-size="17">Syndicate</text>
+    <text x="500" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#f0f6fc">Capital</text>
+    <text x="500" y="259" text-anchor="middle" font-size="20" font-weight="bold" fill="#f0f6fc">Syndicate</text>
 
-    <!-- phase labels -->
-    <text x="500" y="22" text-anchor="middle" class="box-label" font-size="16" fill="#58a6ff">PLAN</text>
-    <text x="795" y="266" text-anchor="middle" class="box-label" font-size="16" fill="#f78166">BUILD</text>
-    <text x="500" y="505" text-anchor="middle" class="box-label" font-size="16" fill="#bc8cff">POLISH</text>
-    <text x="230" y="145" text-anchor="middle" class="box-label" font-size="16" fill="#3fb950">VERIFY</text>
+    <!-- PLAN panel (top, blue) -->
+    <rect x="330" y="10" width="340" height="115" rx="16" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="2.5" filter="url(#dropshadow)"/>
+    <text x="500" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#58a6ff">PLAN</text>
+    <text x="500" y="70" text-anchor="middle" font-size="17" fill="#f0f6fc">Producer</text>
+    <text x="500" y="93" text-anchor="middle" font-size="17" fill="#f0f6fc">Game Designer</text>
+    <text x="500" y="116" text-anchor="middle" font-size="17" fill="#f0f6fc">World-Builder</text>
 
-    <!-- 10 specialist nodes around the wheel -->
-    <rect x="430" y="44"  width="140" height="32" rx="9" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="2"/>
-    <text x="500" y="65" text-anchor="middle" font-size="11" fill="#f0f6fc">Producer</text>
+    <!-- BUILD panel (right, orange) -->
+    <rect x="690" y="183" width="300" height="115" rx="16" fill="url(#panelGradient)" stroke="#f78166" stroke-width="2.5" filter="url(#dropshadow)"/>
+    <text x="840" y="216" text-anchor="middle" font-size="22" font-weight="bold" fill="#f78166">BUILD</text>
+    <text x="840" y="248" text-anchor="middle" font-size="17" fill="#f0f6fc">Gameplay Engineer</text>
+    <text x="840" y="271" text-anchor="middle" font-size="17" fill="#f0f6fc">Art Director</text>
 
-    <rect x="548" y="82"  width="140" height="32" rx="9" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="2"/>
-    <text x="618" y="103" text-anchor="middle" font-size="11" fill="#f0f6fc">Game Designer</text>
+    <!-- POLISH panel (bottom, purple) -->
+    <rect x="320" y="330" width="360" height="140" rx="16" fill="url(#panelGradient)" stroke="#bc8cff" stroke-width="2.5" filter="url(#dropshadow)"/>
+    <text x="500" y="362" text-anchor="middle" font-size="22" font-weight="bold" fill="#bc8cff">POLISH</text>
+    <text x="500" y="388" text-anchor="middle" font-size="17" fill="#f0f6fc">Visual Polish</text>
+    <text x="500" y="410" text-anchor="middle" font-size="17" fill="#f0f6fc">Tech Artist</text>
+    <text x="500" y="432" text-anchor="middle" font-size="17" fill="#f0f6fc">Audio Director</text>
+    <text x="500" y="454" text-anchor="middle" font-size="17" fill="#f0f6fc">Writer</text>
 
-    <rect x="620" y="182" width="140" height="32" rx="9" fill="url(#panelGradient)" stroke="#58a6ff" stroke-width="2"/>
-    <text x="690" y="203" text-anchor="middle" font-size="11" fill="#f0f6fc">World-Builder</text>
-
-    <rect x="620" y="306" width="140" height="32" rx="9" fill="url(#panelGradient)" stroke="#f78166" stroke-width="2"/>
-    <text x="690" y="327" text-anchor="middle" font-size="11" fill="#f0f6fc">Gameplay Eng.</text>
-
-    <rect x="548" y="406" width="140" height="32" rx="9" fill="url(#panelGradient)" stroke="#f78166" stroke-width="2"/>
-    <text x="618" y="427" text-anchor="middle" font-size="11" fill="#f0f6fc">Art Director</text>
-
-    <rect x="430" y="444" width="140" height="32" rx="9" fill="url(#panelGradient)" stroke="#bc8cff" stroke-width="2"/>
-    <text x="500" y="465" text-anchor="middle" font-size="11" fill="#f0f6fc">Visual Polish</text>
-
-    <rect x="312" y="406" width="140" height="32" rx="9" fill="url(#panelGradient)" stroke="#bc8cff" stroke-width="2"/>
-    <text x="382" y="427" text-anchor="middle" font-size="11" fill="#f0f6fc">Tech Artist</text>
-
-    <rect x="240" y="306" width="140" height="32" rx="9" fill="url(#panelGradient)" stroke="#bc8cff" stroke-width="2"/>
-    <text x="310" y="327" text-anchor="middle" font-size="11" fill="#f0f6fc">Audio Director</text>
-
-    <rect x="240" y="182" width="140" height="32" rx="9" fill="url(#panelGradient)" stroke="#bc8cff" stroke-width="2"/>
-    <text x="310" y="203" text-anchor="middle" font-size="11" fill="#f0f6fc">Writer</text>
-
-    <rect x="312" y="82"  width="140" height="32" rx="9" fill="url(#panelGradient)" stroke="#3fb950" stroke-width="2"/>
-    <text x="382" y="103" text-anchor="middle" font-size="11" fill="#f0f6fc">QA Tester</text>
-
-    <text x="500" y="500" text-anchor="middle" font-size="0"></text>
+    <!-- VERIFY panel (left, green) -->
+    <rect x="10" y="183" width="300" height="115" rx="16" fill="url(#panelGradient)" stroke="#3fb950" stroke-width="2.5" filter="url(#dropshadow)"/>
+    <text x="160" y="216" text-anchor="middle" font-size="22" font-weight="bold" fill="#3fb950">VERIFY</text>
+    <text x="160" y="250" text-anchor="middle" font-size="17" fill="#f0f6fc">QA Tester</text>
   </svg>
-  <p class="caption" style="margin-top:6px; margin-bottom:0;">Narrow roles. Coordinated output. Human product owner.</p>
-  <p class="caption" style="margin-top:8px;">No lone genius here: ten specialized AI agents plan, build, polish, and verify—so a human product owner steers what actually ships.</p>
+  <p class="caption" style="margin-top:2px; margin-bottom:0;">Narrow roles. Coordinated output. Human product owner.</p>
+  <p class="caption" style="margin-top:6px;">No lone genius here: ten specialized AI agents plan, build, polish, and verify—so a human product owner steers what actually ships.</p>
 </body>
 </html>
