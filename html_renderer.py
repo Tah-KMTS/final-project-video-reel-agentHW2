@@ -144,9 +144,28 @@ VISUAL_SLIDE_1 = """<!doctype html>
       <rect x="0" y="230" width="55" height="70"/>
       <rect x="60" y="200" width="40" height="100"/>
       <rect x="620" y="215" width="45" height="85"/>
-      <rect x="675" y="190" width="35" height="110"/>
-      <rect x="800" y="235" width="60" height="65"/>
       <rect x="1090" y="210" width="50" height="90"/>
+    </g>
+
+    <!-- background hub: the Whispering Temple Chapel, distant silhouette -->
+    <g opacity="0.35" fill="#161b22">
+      <rect x="185" y="245" width="42" height="55" stroke="#8b949e" stroke-width="1"/>
+      <path d="M185 245 L206 218 L227 245 Z" stroke="#8b949e" stroke-width="1"/>
+      <line x1="206" y1="218" x2="206" y2="196" stroke="#8b949e" stroke-width="2"/>
+      <line x1="199" y1="204" x2="213" y2="204" stroke="#8b949e" stroke-width="2"/>
+    </g>
+
+    <!-- background hub: Neon Dragon Casino / entertainment complex, distant silhouette -->
+    <g opacity="0.35" fill="#161b22">
+      <rect x="675" y="210" width="45" height="90" stroke="#8b949e" stroke-width="1"/>
+      <ellipse cx="697" cy="210" rx="24" ry="16" stroke="#8b949e" stroke-width="1"/>
+      <path d="M697 178 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 z" opacity="0.7"/>
+    </g>
+
+    <!-- background hub: The Underworld, distant silhouette with a jagged roofline -->
+    <g opacity="0.35" fill="#161b22">
+      <path d="M800 300 L800 248 L813 236 L822 250 L833 238 L845 252 L860 240 L860 300 Z" stroke="#8b949e" stroke-width="1"/>
+      <circle cx="822" cy="255" r="2.5" fill="#f85149" opacity="0.8"/>
     </g>
 
     <!-- dark-market alley hint: flickering red neon between INVEST and RISK -->
@@ -213,13 +232,38 @@ VISUAL_SLIDE_1 = """<!doctype html>
       <path d="M1015 108 L1038 116 L1015 124 Z" fill="#d29922"/>
     </g>
 
-    <!-- fishing dock hint, bottom left -->
+    <!-- fishing dock hint, bottom left, with an angler figure -->
     <g filter="url(#dropshadow)">
       <rect x="230" y="290" width="70" height="8" fill="#8b5a2b"/>
+      <circle cx="248" cy="278" r="7" fill="#c9d1d9"/>
+      <path d="M240 285 L256 285 L254 300 L242 300 Z" fill="#c9d1d9"/>
       <line x1="255" y1="290" x2="255" y2="255" stroke="#c9d1d9" stroke-width="2"/>
       <line x1="255" y1="255" x2="285" y2="260" stroke="#c9d1d9" stroke-width="2"/>
       <line x1="285" y1="260" x2="285" y2="272" stroke="#8b949e" stroke-width="1.5"/>
       <path d="M700 305 q20 -10 40 0" stroke="#58a6ff" stroke-width="3" fill="none" opacity="0.7"/>
+    </g>
+
+    <!-- pedestrian walking toward the WORK tower -->
+    <g filter="url(#dropshadow)">
+      <circle cx="180" cy="279" r="6" fill="#58a6ff"/>
+      <path d="M173 286 L187 286 L185 300 L175 300 Z" fill="#58a6ff"/>
+    </g>
+
+    <!-- investor crossing toward the INVEST tower -->
+    <g filter="url(#dropshadow)">
+      <circle cx="650" cy="279" r="6" fill="#3fb950"/>
+      <path d="M643 286 L657 286 L655 300 L645 300 Z" fill="#3fb950"/>
+    </g>
+
+    <!-- gambler crossing toward the RISK tower -->
+    <g filter="url(#dropshadow)">
+      <circle cx="905" cy="279" r="6" fill="#d29922"/>
+      <path d="M898 286 L912 286 L910 300 L900 300 Z" fill="#d29922"/>
+    </g>
+
+    <!-- hooded figure lurking under the dark-alley neon hint -->
+    <g opacity="0.9">
+      <path d="M793 279 Q800 267 807 279 L807 300 L793 300 Z" fill="#f85149"/>
     </g>
 
     <!-- player car cruising the road, headlight glow + speed streaks -->
@@ -320,6 +364,11 @@ VISUAL_SLIDE_2 = """<!doctype html>
         <path d="M475 158 l2.5 7 l7 2.5 l-7 2.5 l-2.5 7 l-2.5 -7 l-7 -2.5 l7 -2.5 z"/>
         <path d="M665 178 l2.5 7 l7 2.5 l-7 2.5 l-2.5 7 l-2.5 -7 l-7 -2.5 l7 -2.5 z"/>
       </g>
+      <!-- player seated at the table -->
+      <g filter="url(#dropshadow)">
+        <circle cx="567" cy="242" r="12" fill="#ffe08a"/>
+        <path d="M552 254 Q567 236 582 254 L579 268 L555 268 Z" fill="#ffe08a"/>
+      </g>
       <text x="567" y="285" text-anchor="middle" font-size="17" fill="#c9d1d9">blackjack &#183; poker &#183; slots</text>
       <circle cx="399" cy="24" r="15" fill="#161b22" stroke="#d29922" stroke-width="2"/>
       <text x="399" y="29" text-anchor="middle" font-size="17" font-weight="bold" fill="#d29922">2</text>
@@ -343,6 +392,11 @@ VISUAL_SLIDE_2 = """<!doctype html>
       </g>
       <!-- jail bars -->
       <rect x="850" y="140" width="190" height="70" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+      <!-- prisoner figure behind the bars -->
+      <g>
+        <circle cx="944" cy="163" r="8" fill="#8b949e"/>
+        <path d="M933 172 L955 172 L953 200 L935 200 Z" fill="#8b949e"/>
+      </g>
       <line x1="875" y1="140" x2="875" y2="210" stroke="#8b949e" stroke-width="4"/>
       <line x1="905" y1="140" x2="905" y2="210" stroke="#8b949e" stroke-width="4"/>
       <line x1="935" y1="140" x2="935" y2="210" stroke="#8b949e" stroke-width="4"/>
@@ -484,15 +538,9 @@ VISUAL_SLIDE_4 = """<!doctype html>
     <path d="M60,300 L90,300 L90,260 L190,260 L230,220 L330,220 L370,170 L470,170 L510,110 L610,110 L650,40 L770,40 L800,90 L860,300 Z"
           fill="url(#mountainGradient)" stroke="#30363d" stroke-width="2"/>
 
-    <!-- climbing rope path + tiny climber figure -->
+    <!-- route path to the summit -->
     <path d="M110,298 Q 250,250 300,225 Q 420,190 460,150 Q 560,100 640,60"
           fill="none" stroke="#8b949e" stroke-width="2" stroke-dasharray="5,6" opacity="0.55"/>
-    <g fill="#ffe08a" opacity="0.9">
-      <circle cx="418" cy="163" r="5"/>
-      <path d="M414 168 L422 168 L421 180 L419 180 L418 172 L417 180 L415 180 Z"/>
-      <line x1="414" y1="171" x2="407" y2="178" stroke="#ffe08a" stroke-width="2" stroke-linecap="round"/>
-      <line x1="422" y1="171" x2="429" y2="165" stroke="#ffe08a" stroke-width="2" stroke-linecap="round"/>
-    </g>
 
     <text x="140" y="285" text-anchor="middle" class="box-label" font-size="19">$50K</text>
     <text x="280" y="245" text-anchor="middle" class="box-label" font-size="19">$250K</text>
@@ -522,16 +570,6 @@ VISUAL_SLIDE_4 = """<!doctype html>
       <path d="M655 55 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 z"/>
       <path d="M790 70 l2.5 6 l6 2.5 l-6 2.5 l-2.5 6 l-2.5 -6 l-6 -2.5 l6 -2.5 z"/>
     </g>
-
-    <!-- $1B flex goal: a faded, distant peak beyond the real mountain, in the clouds -->
-    <g opacity="0.5">
-      <path d="M900,300 L930,190 L960,300 Z" fill="#30363d" stroke="#8b949e" stroke-width="1.5" stroke-dasharray="4,4"/>
-      <ellipse cx="930" cy="200" rx="55" ry="16" fill="#0d1117" opacity="0.7"/>
-      <ellipse cx="895" cy="210" rx="30" ry="11" fill="#0d1117" opacity="0.6"/>
-    </g>
-    <text x="930" y="235" text-anchor="middle" class="box-label" font-size="18" fill="#8b949e" opacity="0.8">$1B</text>
-    <text x="930" y="255" text-anchor="middle" font-size="16" fill="#8b949e" opacity="0.8">optional</text>
-    <text x="930" y="272" text-anchor="middle" font-size="16" fill="#8b949e" opacity="0.8">flex</text>
 
     <!-- "Ways to earn" strip beneath the ladder -->
     <g filter="url(#glow)">
@@ -616,118 +654,143 @@ VISUAL_SLIDE_6 = """<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Slide 6 - Next: The Prison Break</title>
+<title>Slide 6 - What's Next: Fixes, a Clock, an Ending</title>
 <style>""" + VISUAL_CSS + """</style>
 </head>
 <body>
-  <h1>What's Next: The Prison Break</h1>
-  <svg width="1140" height="380" viewBox="0 0 1140 380">
-    <defs>""" + SHARED_DEFS + """
-      <linearGradient id="roadGradient" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#8b949e"/>
-        <stop offset="35%" stop-color="#d29922"/>
-        <stop offset="70%" stop-color="#f78166"/>
-        <stop offset="100%" stop-color="#3fb950"/>
-      </linearGradient>
-      <marker id="roadmapArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-        <path d="M0,0 L10,5 L0,10 Z" fill="#8b949e"/>
-      </marker>
-    </defs>
+  <h1>What's Next: Fixes, a Clock, an Ending</h1>
+  <svg width="1140" height="400" viewBox="0 0 1140 400">
+    <defs>""" + SHARED_DEFS + """</defs>
 
-    <!-- countdown badge -->
+    <!-- countdown badge: real project days remaining -->
     <g filter="url(#glow)">
       <rect x="900" y="15" width="220" height="42" rx="21" fill="#161b22" stroke="#d29922" stroke-width="2"/>
     </g>
-    <text x="1010" y="42" text-anchor="middle" font-size="19" font-weight="bold" fill="#d29922">9&#8211;10 DAYS LEFT</text>
+    <text x="1010" y="42" text-anchor="middle" font-size="19" font-weight="bold" fill="#d29922">~6 DAYS LEFT</text>
 
-    <!-- guard tower silhouette + spotlight beam over the cell -->
-    <g opacity="0.3" fill="#161b22" stroke="#30363d" stroke-width="2">
-      <rect x="10" y="30" width="8" height="60"/>
-      <rect x="0" y="15" width="28" height="20"/>
+    <!-- LEFT PANEL: the new 30-day in-game clock -->
+    <rect x="30" y="72" width="520" height="190" rx="16" fill="url(#panelGradient)" stroke="#d29922" stroke-width="2.5" filter="url(#dropshadow)"/>
+    <text x="290" y="102" text-anchor="middle" class="box-label" font-size="21" fill="#d29922">NEW: 30-DAY CLOCK</text>
+
+    <g filter="url(#dropshadow)">
+      <rect x="60" y="120" width="92" height="128" rx="14" fill="#161b22" stroke="#30363d" stroke-width="3"/>
+      <rect x="70" y="134" width="72" height="88" rx="6" fill="#0d1117"/>
     </g>
-    <path d="M14 35 L115 95 L115 185 L14 35 Z" fill="#ffe08a" opacity="0.08"/>
+    <text x="106" y="172" text-anchor="middle" font-size="30" font-weight="800" fill="#f0f6fc">30</text>
+    <text x="106" y="192" text-anchor="middle" font-size="11" fill="#8b949e">DAY LEFT</text>
+    <rect x="79" y="203" width="54" height="6" rx="3" fill="#30363d"/>
+    <rect x="79" y="203" width="17" height="6" rx="3" fill="#f85149"/>
 
-    <!-- main escape path -->
-    <line x1="60" y1="150" x2="1080" y2="150" stroke="url(#roadGradient)" stroke-width="5" marker-end="url(#roadmapArrow)"/>
-
-    <!-- 1: Cell (tilted -4deg, polaroid frame) -->
-    <g transform="rotate(-4 115 140)">
-      <rect x="62" y="87" width="106" height="106" rx="10" fill="#f0f6fc" filter="url(#dropshadow)"/>
-      <g filter="url(#glow)">
-        <rect x="70" y="95" width="90" height="90" rx="8" fill="#161b22" stroke="#8b949e" stroke-width="3"/>
-      </g>
-      <line x1="90" y1="95" x2="90" y2="185" stroke="#8b949e" stroke-width="3"/>
-      <line x1="115" y1="95" x2="115" y2="185" stroke="#8b949e" stroke-width="3"/>
-      <line x1="140" y1="95" x2="140" y2="185" stroke="#8b949e" stroke-width="3"/>
-      <text x="115" y="220" text-anchor="middle" class="box-label" font-size="17">Cell</text>
-      <text x="115" y="240" text-anchor="middle" font-size="14" fill="#8b949e">why you're locked up</text>
-      <circle cx="70" cy="99" r="13" fill="#161b22" stroke="#8b949e" stroke-width="2"/>
-      <text x="70" y="103" text-anchor="middle" font-size="15" font-weight="bold" fill="#8b949e">1</text>
+    <!-- pressing the existing End Day button, now docked from 30 instead of counting up forever -->
+    <g filter="url(#glow)">
+      <rect x="182" y="148" width="116" height="44" rx="10" fill="#161b22" stroke="#d29922" stroke-width="2.5"/>
+      <text x="240" y="176" text-anchor="middle" font-size="17" font-weight="bold" fill="#d29922">END DAY</text>
     </g>
+    <!-- fingertip tapping the button -->
+    <path d="M312 132 L294 160" stroke="#c9d1d9" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="312" cy="128" r="6" fill="#c9d1d9"/>
+    <!-- arrow from the button back to the counter -->
+    <path d="M178 170 L162 170" stroke="#f85149" stroke-width="2.5"/>
+    <path d="M162 170 L170 165 L170 175 Z" fill="#f85149"/>
+    <text x="170" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#f85149">-1</text>
+    <text x="290" y="228" text-anchor="middle" font-size="14" fill="#c9d1d9">pressing End Day now costs a day off the clock</text>
+    <text x="290" y="250" text-anchor="middle" font-size="15" font-weight="bold" fill="#f85149">0 LEFT = GAME OVER</text>
 
-    <!-- 2: Clues (tilted +3deg, polaroid frame) -->
-    <g transform="rotate(3 380 140)">
-      <rect x="330" y="90" width="100" height="100" rx="10" fill="#f0f6fc" filter="url(#dropshadow)"/>
-      <g filter="url(#glow)">
-        <circle cx="380" cy="140" r="42" fill="#161b22" stroke="#d29922" stroke-width="3"/>
-      </g>
-      <circle cx="368" cy="128" r="16" fill="none" stroke="#d29922" stroke-width="3"/>
-      <line x1="380" y1="140" x2="398" y2="158" stroke="#d29922" stroke-width="4" stroke-linecap="round"/>
-      <text x="380" y="220" text-anchor="middle" class="box-label" font-size="17">Clues</text>
-      <text x="380" y="240" text-anchor="middle" font-size="14" fill="#8b949e">3 prison minigames</text>
-      <circle cx="338" cy="98" r="13" fill="#161b22" stroke="#d29922" stroke-width="2"/>
-      <text x="338" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#d29922">2</text>
-    </g>
+    <!-- RIGHT PANEL: win cutscene replacing the old prison tutorial -->
+    <rect x="590" y="72" width="520" height="190" rx="16" fill="url(#panelGradient)" stroke="#d4af37" stroke-width="2.5" filter="url(#dropshadow)"/>
+    <text x="850" y="102" text-anchor="middle" class="box-label" font-size="21" fill="#d4af37">NEW: WIN CUTSCENE</text>
 
-    <!-- 3: Route (tilted -3deg, polaroid frame) -->
-    <g transform="rotate(-3 670 145)">
-      <rect x="592" y="92" width="156" height="106" rx="10" fill="#f0f6fc" filter="url(#dropshadow)"/>
-      <g filter="url(#glow)">
-        <rect x="600" y="100" width="140" height="90" rx="10" fill="#161b22" stroke="#f78166" stroke-width="3"/>
-      </g>
-      <path d="M615 175 L650 130 L680 155 L725 110" fill="none" stroke="#f78166" stroke-width="3" stroke-dasharray="6,5" stroke-linecap="round"/>
-      <circle cx="615" cy="175" r="5" fill="#f78166"/>
-      <circle cx="725" cy="110" r="5" fill="#f78166"/>
-      <text x="670" y="220" text-anchor="middle" class="box-label" font-size="17">Route</text>
-      <text x="670" y="240" text-anchor="middle" font-size="14" fill="#8b949e">combine the clues</text>
-      <circle cx="600" cy="104" r="13" fill="#161b22" stroke="#f78166" stroke-width="2"/>
-      <text x="600" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#f78166">3</text>
+    <g filter="url(#glow)" transform="translate(636 120)">
+      <rect x="0" y="16" width="78" height="58" rx="6" fill="#161b22" stroke="#d4af37" stroke-width="2.5"/>
+      <path d="M0 16 L18 2 L96 2 L78 16 Z" fill="#161b22" stroke="#d4af37" stroke-width="2.5"/>
+      <path d="M15 16 L31 2" stroke="#d4af37" stroke-width="3"/>
+      <path d="M45 16 L61 2" stroke="#d4af37" stroke-width="3"/>
+      <path d="M75 16 L91 2" stroke="#d4af37" stroke-width="3"/>
     </g>
 
-    <!-- 4: City (tilted +4deg, polaroid frame) -->
-    <g transform="rotate(4 995 142)">
-      <rect x="922" y="87" width="146" height="111" rx="10" fill="#f0f6fc" filter="url(#dropshadow)"/>
-      <g filter="url(#glow)">
-        <rect x="930" y="120" width="40" height="70" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
-        <rect x="975" y="95"  width="40" height="95" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
-        <rect x="1020" y="130" width="40" height="60" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
-      </g>
-      <text x="995" y="220" text-anchor="middle" class="box-label" font-size="17">City</text>
-      <text x="995" y="240" text-anchor="middle" font-size="14" fill="#8b949e">escape unlocked</text>
-      <circle cx="930" cy="99" r="13" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
-      <text x="930" y="103" text-anchor="middle" font-size="15" font-weight="bold" fill="#3fb950">4</text>
+    <!-- triumphant figure at the win line -->
+    <g filter="url(#glow)">
+      <circle cx="800" cy="155" r="10" fill="#ffe08a"/>
+      <path d="M786 170 Q800 150 814 170 L810 205 L790 205 Z" fill="#ffe08a"/>
+      <line x1="787" y1="173" x2="772" y2="153" stroke="#ffe08a" stroke-width="3" stroke-linecap="round"/>
+      <line x1="813" y1="173" x2="828" y2="153" stroke="#ffe08a" stroke-width="3" stroke-linecap="round"/>
     </g>
 
-    <!-- secondary lane: polish if time -->
-    <line x1="60" y1="300" x2="1080" y2="300" stroke="#30363d" stroke-width="2" stroke-dasharray="8,6"/>
-    <text x="60" y="285" font-size="16" fill="#8b949e" font-weight="bold">POLISH IF TIME</text>
+    <text x="945" y="155" text-anchor="middle" font-size="26" font-weight="800" fill="#d4af37">$10M</text>
+    <text x="945" y="182" text-anchor="middle" font-size="14" fill="#c9d1d9">crossing the line plays the ending</text>
+    <text x="850" y="240" text-anchor="middle" font-size="13" fill="#8b949e">a scripted finale for every winning run</text>
+    <g fill="#ffe08a" opacity="0.85">
+      <path d="M700 92 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 z"/>
+      <path d="M1000 96 l2.5 6 l6 2.5 l-6 2.5 l-2.5 6 l-2.5 -6 l-6 -2.5 l6 -2.5 z"/>
+    </g>
 
-    <circle cx="200" cy="330" r="20" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
-    <text x="200" y="336" text-anchor="middle" font-size="19" fill="#58a6ff">$</text>
-    <text x="200" y="365" text-anchor="middle" font-size="14" fill="#8b949e">Economy</text>
+    <!-- BOTTOM: the six-item punch list -->
+    <text x="30" y="288" font-size="16" fill="#8b949e" font-weight="bold">SIX-ITEM PUNCH LIST</text>
+    <line x1="30" y1="298" x2="1110" y2="298" stroke="#30363d" stroke-width="2" stroke-dasharray="8,6"/>
 
-    <circle cx="440" cy="330" r="20" fill="#161b22" stroke="#f78166" stroke-width="2"/>
-    <rect x="432" y="322" width="16" height="12" rx="3" fill="none" stroke="#f78166" stroke-width="2"/>
-    <text x="440" y="365" text-anchor="middle" font-size="14" fill="#8b949e">Minigames</text>
+    <!-- 1: Storyline -->
+    <circle cx="120" cy="345" r="28" fill="#161b22" stroke="#bc8cff" stroke-width="2.5"/>
+    <circle cx="120" cy="333" r="4.5" fill="#bc8cff"/>
+    <path d="M114 340 L126 340 L125 353 L115 353 Z" fill="#bc8cff"/>
+    <path d="M107 356 L120 351 L133 356" stroke="#bc8cff" stroke-width="2" fill="none"/>
+    <circle cx="98" cy="323" r="12" fill="#161b22" stroke="#bc8cff" stroke-width="2"/>
+    <text x="98" y="327" text-anchor="middle" font-size="14" font-weight="bold" fill="#bc8cff">1</text>
+    <text x="120" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Storyline</text>
 
-    <circle cx="680" cy="330" r="20" fill="#161b22" stroke="#d29922" stroke-width="2"/>
-    <circle cx="680" cy="325" r="6" fill="none" stroke="#d29922" stroke-width="2"/>
-    <path d="M670 340 q10 -10 20 0" stroke="#d29922" stroke-width="2" fill="none"/>
-    <text x="680" y="365" text-anchor="middle" font-size="14" fill="#8b949e">NPCs</text>
+    <!-- 2: Stock Exchange -->
+    <circle cx="300" cy="345" r="28" fill="#161b22" stroke="#3fb950" stroke-width="2.5"/>
+    <circle cx="300" cy="333" r="4.5" fill="#3fb950"/>
+    <path d="M294 340 L306 340 L305 353 L295 353 Z" fill="#3fb950"/>
+    <polyline points="286,357 293,349 300,353 309,341" fill="none" stroke="#3fb950" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="278" cy="323" r="12" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+    <text x="278" y="327" text-anchor="middle" font-size="14" font-weight="bold" fill="#3fb950">2</text>
+    <text x="300" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Stock Exchange</text>
 
-    <circle cx="920" cy="330" r="20" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
-    <rect x="911" y="321" width="18" height="13" rx="2" fill="none" stroke="#3fb950" stroke-width="2"/>
-    <text x="920" y="365" text-anchor="middle" font-size="14" fill="#8b949e">UI</text>
+    <!-- 3: Casino / Arcade -->
+    <circle cx="480" cy="345" r="28" fill="#161b22" stroke="#d29922" stroke-width="2.5"/>
+    <circle cx="480" cy="333" r="4.5" fill="#d29922"/>
+    <path d="M474 340 L486 340 L485 353 L475 353 Z" fill="#d29922"/>
+    <rect x="472" y="349" width="10" height="10" rx="2" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
+    <circle cx="477" cy="354" r="1.2" fill="#d29922"/>
+    <circle cx="483" cy="356" r="1.5" fill="none"/>
+    <circle cx="480" cy="323" r="12" fill="#161b22" stroke="#d29922" stroke-width="2"/>
+    <text x="480" y="327" text-anchor="middle" font-size="14" font-weight="bold" fill="#d29922">3</text>
+    <text x="480" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Casino / Arcade</text>
+
+    <!-- 4: Crime loop (car theft to police to jail to bribe/puzzle) -->
+    <circle cx="660" cy="345" r="28" fill="#161b22" stroke="#f85149" stroke-width="2.5"/>
+    <circle cx="660" cy="333" r="4.5" fill="#f85149"/>
+    <path d="M654 340 L666 340 L665 353 L655 353 Z" fill="#f85149"/>
+    <circle cx="649" cy="350" r="4" fill="none" stroke="#f85149" stroke-width="2"/>
+    <circle cx="659" cy="350" r="4" fill="none" stroke="#f85149" stroke-width="2"/>
+    <line x1="653" y1="350" x2="655" y2="350" stroke="#f85149" stroke-width="2"/>
+    <circle cx="638" cy="323" r="12" fill="#161b22" stroke="#f85149" stroke-width="2"/>
+    <text x="638" y="327" text-anchor="middle" font-size="14" font-weight="bold" fill="#f85149">4</text>
+    <text x="660" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Crime Loop</text>
+
+    <!-- 5: Church - done -->
+    <circle cx="840" cy="345" r="28" fill="#161b22" stroke="#58a6ff" stroke-width="2.5"/>
+    <circle cx="840" cy="333" r="4.5" fill="#58a6ff"/>
+    <path d="M828 356 Q840 336 852 356 Z" fill="#58a6ff"/>
+    <rect x="837" y="326" width="6" height="8" fill="#58a6ff"/>
+    <circle cx="818" cy="323" r="12" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+    <text x="818" y="327" text-anchor="middle" font-size="14" font-weight="bold" fill="#58a6ff">5</text>
+    <g filter="url(#glow)">
+      <circle cx="862" cy="325" r="12" fill="#0d3b26" stroke="#3fb950" stroke-width="2"/>
+      <path d="M856 325 L860 330 L868 320" stroke="#3fb950" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="840" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Church — Done</text>
+
+    <!-- 6: Lisa romance path -->
+    <circle cx="1020" cy="345" r="28" fill="#161b22" stroke="#f78166" stroke-width="2.5"/>
+    <circle cx="1012" cy="333" r="4" fill="#f78166"/>
+    <path d="M1007 339 L1017 339 L1016 351 L1008 351 Z" fill="#f78166"/>
+    <circle cx="1028" cy="333" r="4" fill="#f78166"/>
+    <path d="M1023 339 L1033 339 L1032 351 L1024 351 Z" fill="#f78166"/>
+    <path d="M1020 358 c-5,-6 -15,-2 -15,6 c0,6 8,10 15,16 c7,-6 15,-10 15,-16 c0,-8 -10,-12 -15,-6 z" fill="#f78166"/>
+    <circle cx="998" cy="323" r="12" fill="#161b22" stroke="#f78166" stroke-width="2"/>
+    <text x="998" y="327" text-anchor="middle" font-size="14" font-weight="bold" fill="#f78166">6</text>
+    <text x="1020" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Lisa Romance</text>
   </svg>
   <p class="caption">__NARRATION__</p>
 </body>

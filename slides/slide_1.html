@@ -88,9 +88,28 @@
       <rect x="0" y="230" width="55" height="70"/>
       <rect x="60" y="200" width="40" height="100"/>
       <rect x="620" y="215" width="45" height="85"/>
-      <rect x="675" y="190" width="35" height="110"/>
-      <rect x="800" y="235" width="60" height="65"/>
       <rect x="1090" y="210" width="50" height="90"/>
+    </g>
+
+    <!-- background hub: the Whispering Temple Chapel, distant silhouette -->
+    <g opacity="0.35" fill="#161b22">
+      <rect x="185" y="245" width="42" height="55" stroke="#8b949e" stroke-width="1"/>
+      <path d="M185 245 L206 218 L227 245 Z" stroke="#8b949e" stroke-width="1"/>
+      <line x1="206" y1="218" x2="206" y2="196" stroke="#8b949e" stroke-width="2"/>
+      <line x1="199" y1="204" x2="213" y2="204" stroke="#8b949e" stroke-width="2"/>
+    </g>
+
+    <!-- background hub: Neon Dragon Casino / entertainment complex, distant silhouette -->
+    <g opacity="0.35" fill="#161b22">
+      <rect x="675" y="210" width="45" height="90" stroke="#8b949e" stroke-width="1"/>
+      <ellipse cx="697" cy="210" rx="24" ry="16" stroke="#8b949e" stroke-width="1"/>
+      <path d="M697 178 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 z" opacity="0.7"/>
+    </g>
+
+    <!-- background hub: The Underworld, distant silhouette with a jagged roofline -->
+    <g opacity="0.35" fill="#161b22">
+      <path d="M800 300 L800 248 L813 236 L822 250 L833 238 L845 252 L860 240 L860 300 Z" stroke="#8b949e" stroke-width="1"/>
+      <circle cx="822" cy="255" r="2.5" fill="#f85149" opacity="0.8"/>
     </g>
 
     <!-- dark-market alley hint: flickering red neon between INVEST and RISK -->
@@ -157,13 +176,38 @@
       <path d="M1015 108 L1038 116 L1015 124 Z" fill="#d29922"/>
     </g>
 
-    <!-- fishing dock hint, bottom left -->
+    <!-- fishing dock hint, bottom left, with an angler figure -->
     <g filter="url(#dropshadow)">
       <rect x="230" y="290" width="70" height="8" fill="#8b5a2b"/>
+      <circle cx="248" cy="278" r="7" fill="#c9d1d9"/>
+      <path d="M240 285 L256 285 L254 300 L242 300 Z" fill="#c9d1d9"/>
       <line x1="255" y1="290" x2="255" y2="255" stroke="#c9d1d9" stroke-width="2"/>
       <line x1="255" y1="255" x2="285" y2="260" stroke="#c9d1d9" stroke-width="2"/>
       <line x1="285" y1="260" x2="285" y2="272" stroke="#8b949e" stroke-width="1.5"/>
       <path d="M700 305 q20 -10 40 0" stroke="#58a6ff" stroke-width="3" fill="none" opacity="0.7"/>
+    </g>
+
+    <!-- pedestrian walking toward the WORK tower -->
+    <g filter="url(#dropshadow)">
+      <circle cx="180" cy="279" r="6" fill="#58a6ff"/>
+      <path d="M173 286 L187 286 L185 300 L175 300 Z" fill="#58a6ff"/>
+    </g>
+
+    <!-- investor crossing toward the INVEST tower -->
+    <g filter="url(#dropshadow)">
+      <circle cx="650" cy="279" r="6" fill="#3fb950"/>
+      <path d="M643 286 L657 286 L655 300 L645 300 Z" fill="#3fb950"/>
+    </g>
+
+    <!-- gambler crossing toward the RISK tower -->
+    <g filter="url(#dropshadow)">
+      <circle cx="905" cy="279" r="6" fill="#d29922"/>
+      <path d="M898 286 L912 286 L910 300 L900 300 Z" fill="#d29922"/>
+    </g>
+
+    <!-- hooded figure lurking under the dark-alley neon hint -->
+    <g opacity="0.9">
+      <path d="M793 279 Q800 267 807 279 L807 300 L793 300 Z" fill="#f85149"/>
     </g>
 
     <!-- player car cruising the road, headlight glow + speed streaks -->
@@ -181,6 +225,6 @@
     <line x1="280" y1="268" x2="318" y2="268" stroke="#f0f6fc" stroke-width="2" opacity="0.35"/>
     <line x1="270" y1="292" x2="310" y2="292" stroke="#f0f6fc" stroke-width="2" opacity="0.3"/>
   </svg>
-  <p class="caption">What if GTA became a money machine? Work, trade, gamble, or go dark—your hustle, your path to ten million.</p>
+  <p class="caption">What if your open-world adventure was powered by real financial choices? In Capital Syndicate, every route—from markets and property to high-risk deals—helps you chase one explosive goal: build your way to ten million.</p>
 </body>
 </html>

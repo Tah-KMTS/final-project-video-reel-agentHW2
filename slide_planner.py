@@ -49,21 +49,27 @@ order:
    assistant answers any question the player has about the game.
 4. The goal: build toward $10M net worth through a tiered milestone
    ladder ($50k -> $250k -> $1M -> $5M -> $10M) - that tiered ladder is
-   the real win condition. $1B is NOT the win condition; mention it only
-   as an aspirational "flex goal" for players who want to keep playing
-   past the real win, being clear it is optional bragging rights, not
-   the actual target.
+   the real win condition, and $10M is the top of it. Do not mention
+   $1B or any goal beyond $10M - there isn't one for this slide.
 5. How it's built: the game itself is developed by a coordinated fleet
    of 10 specialized AI subagents (a producer, game-designer,
    world-builder, gameplay-engineer, art-director, visual-polish,
    technical-artist, audio-director, writer, and qa-tester), each with a
    narrow job, rather than one generalist assistant - this is itself the
    applied-AI/agentic-systems lesson of the project.
-6. What's next (9-10 days left): a brand-new prison tutorial world -
-   an opening scene/story that explains why the player is locked up and
-   sets up a revenge motivation, then about 3 in-prison minigames whose
-   clues unlock the escape route into the main city world - plus a
-   general polish pass tightening everything already shipped.
+6. What's next (~6 days left): rather than a brand-new prologue world,
+   the milestone was re-scoped down to a smaller narrative capstone - a
+   win cutscene that plays once the player crosses $10M - plus a
+   six-item punch list: tightening the storyline, auditing the stock
+   exchange, adding more casino/arcade minigames, straightening the
+   existing car-theft/police/jail/bribe flow, confirming the church hub
+   is done, and verifying the Lisa romance path. On top of that, a new
+   30-day clock: the game already has an "End Day" action that resolves
+   the day and advances to the next, counting up forever from Day 1 -
+   this caps it into a "Day Left: 30" countdown that drops by one each
+   time the player presses End Day. The game only ends once that
+   counter reaches zero, not from any single End Day press - be
+   precise about this distinction, it's easy to misstate.
 
 For each slide, write:
 - description: what appears on screen - the text and/or visual for that
