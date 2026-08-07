@@ -21,8 +21,8 @@
       "narration": "The game is also a lesson in agentic systems. Ten specialized AI subagents divide the work—from producer and world-builder to gameplay, art, audio, writing, and live-browser QA—instead of asking one generalist assistant to do everything."
     },
     {
-      "description": "A production roadmap slide with a large “~6 DAYS LEFT” header and a countdown panel reading “Day Left: 30.” On the left, a red crossed-out card says “No new prison prologue world”; beside it, a gold card says “New capstone: $10M win cutscene.” On the right, a six-item punch list appears with checkboxes: “Tighten storyline,” “Audit stock exchange,” “Add casino/arcade minigames,” “Straighten car-theft → police → jail → bribe flow,” “Confirm church hub is done,” and “Verify Lisa romance path.” A footer warning reads “Phone check costs 1 day • Day 0 = game over.”",
-      "narration": "With about six days left, the scope gets sharper: no brand-new prison world, but a focused win cutscene when the player crosses ten million. The finish line is a six-item punch list, plus a thirty-day clock where checking your phone costs a day—and reaching zero ends the run."
+      "description": "A production roadmap slide with a “~6 DAYS LEFT” header and three highlighted panels: a red shield-and-warning icon labeled “Crime System,” a coral heart-with-two-figures icon labeled “Dating Sim,” and a gold potted-plant icon labeled “Building Interiors.” Below, a six-item punch list appears with icons for Storyline, Stock Exchange, Casino/Arcade, Crime System, Church (marked done), and Dating Sim.",
+      "narration": "With about six days left, the plan sharpens again: no thirty-day clock, no win cutscene—that time goes instead toward a deeper crime system, an expanded dating sim, and a visual pass on every building's interior, on top of polishing the full six-item punch list."
     }
   ]
 }
