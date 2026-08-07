@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Slide 6 - What's Next: Fixes, a Clock, an Ending</title>
+<title>Slide 6 - What's Next: Crime, Dating Sim, Interiors</title>
 <style>
   body {
     margin: 0;
@@ -40,7 +40,7 @@
 </style>
 </head>
 <body>
-  <h1>What's Next: Fixes, a Clock, an Ending</h1>
+  <h1>What's Next: Crime, Dating Sim, Interiors</h1>
   <svg width="1140" height="400" viewBox="0 0 1140 400">
     <defs>
       <linearGradient id="panelGradient" x1="0" y1="0" x2="0" y2="1">
@@ -65,61 +65,41 @@
     </g>
     <text x="1010" y="42" text-anchor="middle" font-size="19" font-weight="bold" fill="#d29922">~6 DAYS LEFT</text>
 
-    <!-- LEFT PANEL: the new 30-day in-game clock -->
-    <rect x="30" y="72" width="520" height="190" rx="16" fill="url(#panelGradient)" stroke="#d29922" stroke-width="2.5" filter="url(#dropshadow)"/>
-    <text x="290" y="102" text-anchor="middle" class="box-label" font-size="21" fill="#d29922">NEW: 30-DAY CLOCK</text>
-
-    <g filter="url(#dropshadow)">
-      <rect x="60" y="120" width="92" height="128" rx="14" fill="#161b22" stroke="#30363d" stroke-width="3"/>
-      <rect x="70" y="134" width="72" height="88" rx="6" fill="#0d1117"/>
-    </g>
-    <text x="106" y="172" text-anchor="middle" font-size="30" font-weight="800" fill="#f0f6fc">30</text>
-    <text x="106" y="192" text-anchor="middle" font-size="11" fill="#8b949e">DAY LEFT</text>
-    <rect x="79" y="203" width="54" height="6" rx="3" fill="#30363d"/>
-    <rect x="79" y="203" width="17" height="6" rx="3" fill="#f85149"/>
-
-    <!-- pressing the existing End Day button, now docked from 30 instead of counting up forever -->
+    <!-- PANEL 1: Crime System expansion -->
+    <rect x="30" y="72" width="340" height="190" rx="16" fill="url(#panelGradient)" stroke="#f85149" stroke-width="2.5" filter="url(#dropshadow)"/>
+    <text x="200" y="102" text-anchor="middle" class="box-label" font-size="20" fill="#f85149">CRIME SYSTEM</text>
     <g filter="url(#glow)">
-      <rect x="182" y="148" width="116" height="44" rx="10" fill="#161b22" stroke="#d29922" stroke-width="2.5"/>
-      <text x="240" y="176" text-anchor="middle" font-size="17" font-weight="bold" fill="#d29922">END DAY</text>
+      <path d="M172 132 L200 120 L228 132 L228 160 Q228 182 200 194 Q172 182 172 160 Z" fill="#161b22" stroke="#f85149" stroke-width="2.5"/>
+      <rect x="197" y="138" width="6" height="26" rx="3" fill="#f85149"/>
+      <circle cx="200" cy="172" r="4.5" fill="#f85149"/>
     </g>
-    <!-- fingertip tapping the button -->
-    <path d="M312 132 L294 160" stroke="#c9d1d9" stroke-width="6" stroke-linecap="round"/>
-    <circle cx="312" cy="128" r="6" fill="#c9d1d9"/>
-    <!-- arrow from the button back to the counter -->
-    <path d="M178 170 L162 170" stroke="#f85149" stroke-width="2.5"/>
-    <path d="M162 170 L170 165 L170 175 Z" fill="#f85149"/>
-    <text x="170" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#f85149">-1</text>
-    <text x="290" y="228" text-anchor="middle" font-size="14" fill="#c9d1d9">pressing End Day now costs a day off the clock</text>
-    <text x="290" y="250" text-anchor="middle" font-size="15" font-weight="bold" fill="#f85149">0 LEFT = GAME OVER</text>
+    <text x="200" y="225" text-anchor="middle" font-size="13" fill="#c9d1d9">bigger heists, sharper</text>
+    <text x="200" y="245" text-anchor="middle" font-size="13" fill="#c9d1d9">cop AI, real consequences</text>
 
-    <!-- RIGHT PANEL: win cutscene replacing the old prison tutorial -->
-    <rect x="590" y="72" width="520" height="190" rx="16" fill="url(#panelGradient)" stroke="#d4af37" stroke-width="2.5" filter="url(#dropshadow)"/>
-    <text x="850" y="102" text-anchor="middle" class="box-label" font-size="21" fill="#d4af37">NEW: WIN CUTSCENE</text>
-
-    <g filter="url(#glow)" transform="translate(636 120)">
-      <rect x="0" y="16" width="78" height="58" rx="6" fill="#161b22" stroke="#d4af37" stroke-width="2.5"/>
-      <path d="M0 16 L18 2 L96 2 L78 16 Z" fill="#161b22" stroke="#d4af37" stroke-width="2.5"/>
-      <path d="M15 16 L31 2" stroke="#d4af37" stroke-width="3"/>
-      <path d="M45 16 L61 2" stroke="#d4af37" stroke-width="3"/>
-      <path d="M75 16 L91 2" stroke="#d4af37" stroke-width="3"/>
-    </g>
-
-    <!-- triumphant figure at the win line -->
+    <!-- PANEL 2: Dating Sim expansion -->
+    <rect x="400" y="72" width="340" height="190" rx="16" fill="url(#panelGradient)" stroke="#f78166" stroke-width="2.5" filter="url(#dropshadow)"/>
+    <text x="570" y="102" text-anchor="middle" class="box-label" font-size="20" fill="#f78166">DATING SIM</text>
     <g filter="url(#glow)">
-      <circle cx="800" cy="155" r="10" fill="#ffe08a"/>
-      <path d="M786 170 Q800 150 814 170 L810 205 L790 205 Z" fill="#ffe08a"/>
-      <line x1="787" y1="173" x2="772" y2="153" stroke="#ffe08a" stroke-width="3" stroke-linecap="round"/>
-      <line x1="813" y1="173" x2="828" y2="153" stroke="#ffe08a" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="546" cy="118" r="5" fill="#f78166"/>
+      <path d="M539 126 L553 126 L551 140 L541 140 Z" fill="#f78166"/>
+      <circle cx="594" cy="118" r="5" fill="#f78166"/>
+      <path d="M587 126 L601 126 L599 140 L589 140 Z" fill="#f78166"/>
+      <path d="M570,175 C530,145 550,115 570,140 C590,115 610,145 570,175 Z" fill="#f78166"/>
     </g>
+    <text x="570" y="225" text-anchor="middle" font-size="13" fill="#c9d1d9">romance paths across</text>
+    <text x="570" y="245" text-anchor="middle" font-size="13" fill="#c9d1d9">the full NPC roster</text>
 
-    <text x="945" y="155" text-anchor="middle" font-size="26" font-weight="800" fill="#d4af37">$10M</text>
-    <text x="945" y="182" text-anchor="middle" font-size="14" fill="#c9d1d9">crossing the line plays the ending</text>
-    <text x="850" y="240" text-anchor="middle" font-size="13" fill="#8b949e">a scripted finale for every winning run</text>
-    <g fill="#ffe08a" opacity="0.85">
-      <path d="M700 92 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 z"/>
-      <path d="M1000 96 l2.5 6 l6 2.5 l-6 2.5 l-2.5 6 l-2.5 -6 l-6 -2.5 l6 -2.5 z"/>
+    <!-- PANEL 3: Building Interiors art pass -->
+    <rect x="770" y="72" width="340" height="190" rx="16" fill="url(#panelGradient)" stroke="#d29922" stroke-width="2.5" filter="url(#dropshadow)"/>
+    <text x="940" y="102" text-anchor="middle" class="box-label" font-size="20" fill="#d29922">BUILDING INTERIORS</text>
+    <g filter="url(#glow)">
+      <path d="M940 175 C920 165 918 135 940 120" stroke="#d29922" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M940 175 C940 150 940 125 940 110" stroke="#d29922" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M940 175 C960 165 962 135 940 120" stroke="#d29922" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M925 175 L955 175 L950 195 L930 195 Z" fill="#d29922"/>
     </g>
+    <text x="940" y="225" text-anchor="middle" font-size="13" fill="#c9d1d9">art pass on every hub's</text>
+    <text x="940" y="245" text-anchor="middle" font-size="13" fill="#c9d1d9">interior, not just exterior</text>
 
     <!-- BOTTOM: the six-item punch list -->
     <text x="30" y="288" font-size="16" fill="#8b949e" font-weight="bold">SIX-ITEM PUNCH LIST</text>
@@ -154,7 +134,7 @@
     <text x="480" y="327" text-anchor="middle" font-size="14" font-weight="bold" fill="#d29922">3</text>
     <text x="480" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Casino / Arcade</text>
 
-    <!-- 4: Crime loop (car theft to police to jail to bribe/puzzle) -->
+    <!-- 4: Crime system (car theft to police to jail to bribe/puzzle, expanded) -->
     <circle cx="660" cy="345" r="28" fill="#161b22" stroke="#f85149" stroke-width="2.5"/>
     <circle cx="660" cy="333" r="4.5" fill="#f85149"/>
     <path d="M654 340 L666 340 L665 353 L655 353 Z" fill="#f85149"/>
@@ -163,7 +143,7 @@
     <line x1="653" y1="350" x2="655" y2="350" stroke="#f85149" stroke-width="2"/>
     <circle cx="638" cy="323" r="12" fill="#161b22" stroke="#f85149" stroke-width="2"/>
     <text x="638" y="327" text-anchor="middle" font-size="14" font-weight="bold" fill="#f85149">4</text>
-    <text x="660" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Crime Loop</text>
+    <text x="660" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Crime System</text>
 
     <!-- 5: Church - done -->
     <circle cx="840" cy="345" r="28" fill="#161b22" stroke="#58a6ff" stroke-width="2.5"/>
@@ -178,7 +158,7 @@
     </g>
     <text x="840" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Church — Done</text>
 
-    <!-- 6: Lisa romance path -->
+    <!-- 6: Dating sim (Lisa path verified, expanded to more of the roster) -->
     <circle cx="1020" cy="345" r="28" fill="#161b22" stroke="#f78166" stroke-width="2.5"/>
     <circle cx="1012" cy="333" r="4" fill="#f78166"/>
     <path d="M1007 339 L1017 339 L1016 351 L1008 351 Z" fill="#f78166"/>
@@ -187,8 +167,8 @@
     <path d="M1020 358 c-5,-6 -15,-2 -15,6 c0,6 8,10 15,16 c7,-6 15,-10 15,-16 c0,-8 -10,-12 -15,-6 z" fill="#f78166"/>
     <circle cx="998" cy="323" r="12" fill="#161b22" stroke="#f78166" stroke-width="2"/>
     <text x="998" y="327" text-anchor="middle" font-size="14" font-weight="bold" fill="#f78166">6</text>
-    <text x="1020" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Lisa Romance</text>
+    <text x="1020" y="392" text-anchor="middle" font-size="14" fill="#c9d1d9">Dating Sim</text>
   </svg>
-  <p class="caption">With six production days left, we're landing one win cutscene at ten million dollars, plus a punch list across storyline, exchange, casino, crime, church, and romance. The day counter is now capped at thirty, dropping one per End Day press — running out ends the game.</p>
+  <p class="caption">With about six production days left, we're pushing deeper on three systems — crime, dating sim, and building interiors — while continuing to polish the full six-item punch list: storyline, exchange, casino, crime system, church, and dating sim.</p>
 </body>
 </html>
